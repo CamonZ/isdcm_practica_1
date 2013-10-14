@@ -1,0 +1,15 @@
+es:
+  activerecord:
+    errors:
+      messages:
+        blank: "no puede estar vacio."
+        unique: "debe ser unico"
+    model:
+      user: "Usuario"
+    attributes:
+      user:
+        name: "Nombre:"
+        last_name: "Apellido:"
+        login: "Login:"
+        password: "Clave:"
+        email: "Email:"

@@ -1,0 +1,28 @@
+%h1
+  Registro de Usuarios
+= form_for @user do |f|
+  -if @user.errors.any?
+    .model_errors
+      %h2
+        Se han presentado los siguientes errores:
+      %ul
+        - @user.errors.full_messages.each do |message|
+          %li
+            = message
+  .name
+    = f.label User.human_attribute_name("name")
+    = f.text_field :name
+  .last_name
+    = f.label User.human_attribute_name("last_name")
+    = f.text_field :last_name
+  .email
+    = f.label User.human_attribute_name("email")
+    = f.text_field :email
+  .login
+    = f.label User.human_attribute_name("login")
+    = f.text_field :login
+  .password
+    = f.label User.human_attribute_name("password")
+    = f.password_field :password
+  .submit
+    = f.submit "Continuar", :class => "submit"
