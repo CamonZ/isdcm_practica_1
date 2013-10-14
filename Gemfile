@@ -26,10 +26,12 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+gem 'haml'
 
 group :test, :development do
 	gem 'rspec'
 	gem 'rspec-rails'
+	gem 'haml-rails'
 end
 
 # Use ActiveModel has_secure_password
