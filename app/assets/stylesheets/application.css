@@ -11,3 +11,19 @@
  *= require_self
  *= require_tree .
  */
+
+
+html{
+  background-color: #fafafa;
+  color: #555;
+}
+.container{
+  width: 960px;
+  margin: 20px auto;
+  display: block;
+}
+.box{
+  width: 720px;
+  margin: 50px auto;
+  display: block;
+}

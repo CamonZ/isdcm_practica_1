@@ -1,3 +1,83 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+  font-family: "Helvetica";
+  font-size: 2em;
+  font-weight: 800; 
+  text-align: center;
+  width: 640px;
+  border-top: 2px dotted #004394;
+  color: #777;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+form{
+  display: block;
+  width: 640px;
+  background-color: #ddd;
+  label{
+    float: left;
+    text-align: right;
+    width: 20%;
+    margin-right: 3%;
+    margin-left: 5%;
+    margin-top: 10px;
+    font-size: 1.1em;
+  }
+  input{
+    float: left;
+    width: 60%;
+    margin-top: 10px;
+    font-size: 1.1em;
+  }
+  div{ margin-top: 15px;}
+  div:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;    
+  }
+}
+
+.submit{
+  width: 15%;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+input.submit{
+  width: auto;
+  padding: 5px 15px;
+  background-color: #6f0094;
+  color: #fafafa;
+  font-weight: 800;
+  font-size: 0.8em;
+}
+
+form:after{
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.user_details{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.model_errors{
+  background-color: #ff7578;
+  color: #444;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  h2{
+    margin-left: 10px;
+    font-size: 1.4em;
+    color: #555
+  }
+}
