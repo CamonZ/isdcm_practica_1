@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     elsif @user.password != params[:user][:password]
       flash[:error] = "Tu clave es incorrecta"
     end
-    if flash[:error].empty?
+    if flash[:error].nil?
       redirect_to user_path(@user)
     else
       render template: 'users/index'
