@@ -54,5 +54,7 @@ Practica1::Application.routes.draw do
   #     resources :products
   #   end
 
-  root 'users#index' 
+  get "users" => "users#index"
+  post 'users' => "users#create"
+  root 'users#new' 
 end
