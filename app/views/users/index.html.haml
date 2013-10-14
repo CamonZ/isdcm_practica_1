@@ -1,0 +1,21 @@
+%h1
+  Login de Usuarios
+= form_for :user, url: user_login_path do |f|
+  -if !flash[:error].empty?
+    .model_errors
+      %h2
+        Se han presentado los siguientes errores:
+      %ul
+        %li
+          = flash[:error]
+  .login
+    = f.label User.human_attribute_name("login")
+    = f.text_field :login
+  .password
+    = f.label User.human_attribute_name("password")
+    = f.password_field :password
+  .submit
+    = f.submit "Acceder", :class => "submit"
+.new_user
+  O quizas deseas
+  = link_to "crear un nuevo usuario", new_user_path

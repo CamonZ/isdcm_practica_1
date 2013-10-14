@@ -1,6 +1,20 @@
 class UsersController < ApplicationController
   def index
-    
+    @user = User.new
+  end
+
+  def login
+    @user = User.where(login: params[:user][:login]).first
+    if !@user
+      flash[:error] = "Este usuario no esta registrado"
+    elsif @user.password != params[:user][:password]
+      flash[:error] = "Tu clave es incorrecta"
+    end
+    if flash[:error].empty?
+      redirect_to user_path(@user)
+    else
+      render template: 'users/index'
+    end
   end
 
   def new

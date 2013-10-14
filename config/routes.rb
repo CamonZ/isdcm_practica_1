@@ -55,5 +55,6 @@ Practica1::Application.routes.draw do
   #   end
 
   resources :users
-  root 'users#new'
+  post 'users/login', as: :user_login
+  root 'users#index'
 end
