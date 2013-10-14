@@ -1,7 +1,7 @@
 %h1
   Login de Usuarios
 = form_for :user, url: user_login_path do |f|
-  -if !flash[:error].empty?
+  -if flash.has_key?(:error) && !flash[:error].empty?
     .model_errors
       %h2
         Se han presentado los siguientes errores:
